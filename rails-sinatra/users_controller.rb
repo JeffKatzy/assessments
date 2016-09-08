@@ -6,16 +6,40 @@ class UsersController < ApplicationController
   # /users/new
 
   # create
+  def create
+    @user = User.new
+    @user.save
+  end
 
   # index
+  def index
+    @users = User.all
+  end
 
   # show
+  def show
+    @user = User.find(params[id])
+  end
 
   # edit
+  def edit
+    @user = User.find(params[id])
+  end
 
   # update
+  def update
+    @user = User.find(params[id])
+    @user.update(params)
+    #@user.name = params[name]
+    #@user.hometown = params[hometown]
+    #@user.save
+  end
 
   # destroy
+  def destroy
+    @user = User.find(params[id])
+    @user.destroy
+  end
 
 end
 

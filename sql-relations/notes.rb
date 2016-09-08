@@ -19,3 +19,39 @@ id | name |
 # - Do the belongs_to first
 # - Then do the has_many
 # - If there is a many to many, we need a third table
+
+customers
+restaurants
+owners
+reviews
+
+owners have many restaurants
+owners have many
+
+restaurants belong to owners
+restaurants have many reviews
+restaurants have many customers through reviews
+
+review belongs to a restaurant
+review belongs to a customer
+
+customers have many reviews
+customers have many restaurants through reviews
+
+Reviews is the joins table between Customers and restaurants
+
+To me... Owners are irrelevant when it comes to reviews & customers but
+we can easily connect Owners to both reviews and customers through the restaurants that they owners
+----------
+
+Owners
+id |
+
+Restaurants
+id | owner_id | name
+
+Customers
+id | name
+
+Reviews
+id | restaurant_id | customer_id
