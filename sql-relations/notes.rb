@@ -41,7 +41,8 @@ customers have many restaurants through reviews
 Reviews is the joins table between Customers and restaurants
 
 To me... Owners are irrelevant when it comes to reviews & customers but
-we can easily connect Owners to both reviews and customers through the restaurants that they owners
+we can easily connect Owners to both reviews and customers through the restaurants that they owners.
+It all depends on what we want in the end-game.
 ----------
 
 Owners
