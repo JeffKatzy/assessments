@@ -16,6 +16,7 @@ class Customer
   end
 
   def self.find_by_id(id)
+    # make a class method customers, and use it.
     @@customers.find do |customer|
       customer.id == id
     end
